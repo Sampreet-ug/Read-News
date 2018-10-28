@@ -17,11 +17,13 @@ for news in news_list:
   print(news.pubDate.text)
   print("-"*60)
 
-fname = "G:\\news.txt"
+# Save the news in a file
+fname = #path
 with open(fname,"w") as f:
   for news in news_list:
     f.write(news.title.text+"\n")
 
+# Read the news aloud
 for news in news_list:
     engine = pyttsx3.init()
     engine.say(news.title.text)
